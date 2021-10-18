@@ -7,12 +7,12 @@ const globalStyles = globalCss({
     padding: 0,
     "-webkit-font-smoothing": "antialiased",
     "-moz-osx-font-smoothing": "grayscale",
-    "text-rendering": "optimizeLegibility",
+    textRendering: "optimizeLegibility",
   },
   html: {
     background: "$mint1",
     color: "$mint12",
-    fontFamily: "$sans",
+    fontFamily: "$mono",
   },
 });
 
@@ -20,4 +20,5 @@ function MyApp({ Component, pageProps }: AppProps) {
   globalStyles();
   return <Component {...pageProps} />;
 }
+
 export default MyApp;
