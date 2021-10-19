@@ -3,6 +3,19 @@ import { motion } from "framer-motion";
 
 import { styled } from "@/stitches";
 
+const code = `import { motion } from 'framer-motion'
+
+export function Box() {
+  return (
+    <motion.div
+      animate={{
+        y: 500
+      }}
+    />
+  )
+}
+`;
+
 const AnimationBreakdown: NextPage = () => {
   return (
     <Main>
@@ -10,12 +23,11 @@ const AnimationBreakdown: NextPage = () => {
         <Title>Animation Breakdown</Title>
         <p>
           Great work! There you have it — your first animation with Framer
-          Motion. If that seemed almost too simple
+          Motion. Before we move on, let's break down that animation. How did we
+          go from the `animate` prop to the animation you see on the right?
         </p>
-        <p>
-          To move on to the next phase, replace the div in the code with
-          motion.div - and watch as the box comes alive!
-        </p>
+        <p>Here's the code from before:</p>
+        <CodeBlock>{code}</CodeBlock>
       </Article>
       <Visualizer>
         <Box
@@ -31,6 +43,13 @@ const AnimationBreakdown: NextPage = () => {
     </Main>
   );
 };
+
+const CodeBlock = styled("pre", {
+  fontFamily: "$mono",
+  background: "$mint2",
+  padding: "$8 $10",
+  borderRadius: "8px",
+});
 
 const Main = styled("main", {
   display: "grid",
@@ -73,6 +92,12 @@ const Article = styled("article", {
 
   "> :not(:last-child)": {
     marginBottom: "1em",
+  },
+
+  [`> ${CodeBlock}`]: {
+    gridColumn: "1 / -1",
+    marginTop: "1em",
+    marginBottom: "2em",
   },
 });
 
