@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { styled } from "@/stitches";
@@ -29,7 +30,9 @@ const Home: NextPage = () => {
           To move on to the next phase, replace the div in the code with
           motion.div - and watch as the box comes alive!
         </p>
-        <NextButton>Go to next stage</NextButton>
+        <Link href="/animation-breakdown" passHref>
+          <NextButton>Go to next section</NextButton>
+        </Link>
       </Article>
       <Editor>{code}</Editor>
       <Visualizer>
@@ -50,7 +53,7 @@ const Home: NextPage = () => {
 const Main = styled("main", {
   display: "grid",
   height: "100vh",
-  gridTemplateColumns: "55ch repeat(2, 1fr)",
+  gridTemplateColumns: "65ch repeat(2, 1fr)",
 });
 
 const Visualizer = styled("div", {
@@ -92,13 +95,15 @@ const Editor = styled("pre", {
   fontFamily: "$mono",
 });
 
-const NextButton = styled("button", {
+const NextButton = styled("a", {
   marginTop: "auto",
   background: "none",
   border: "2px solid currentColor",
   color: "$mint8",
   font: "inherit",
   padding: "$3",
+  textDecoration: "none",
+  textAlign: "center",
 });
 
 export default Home;
