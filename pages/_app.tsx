@@ -12,7 +12,15 @@ const globalStyles = globalCss({
   html: {
     background: "$mint2",
     color: "$mint12",
+    fontFamily: "$sans",
+  },
+  pre: {
     fontFamily: "$mono",
+  },
+  code: {
+    fontFamily: "$mono",
+    padding: "$1",
+    background: "$mint4",
   },
 });
 

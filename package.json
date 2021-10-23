@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.7",
+    "@radix-ui/react-slider": "^0.1.1",
     "@stitches/react": "^1.2.5",
     "esbuild": "^0.13.8",
     "framer-motion": "^4.1.17",

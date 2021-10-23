@@ -47,6 +47,9 @@ export async function getPage(slug: string) {
   const content = await readFile(path.join(slug, "index.mdx"));
   const { code, frontmatter } = await bundleMDX(content.toString(), {
     cwd: path.join(POSTS, slug),
+    esbuildOptions(options) {
+      return { ...options, target: ["es2020"] };
+    },
   });
   return { frontmatter, code };
 }

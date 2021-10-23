@@ -43,7 +43,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const CodeBlock = styled("pre", {
   fontFamily: "$mono",
-  background: "$mint3",
+  background: "$mint4",
   padding: "$8 $10",
   borderRadius: "8px",
 });
@@ -53,14 +53,17 @@ const Title = styled("h1", {
   background: "linear-gradient(45deg, $colors$mint8, $colors$mint10)",
   "-webkit-background-clip": "text",
   "-webkit-text-fill-color": "transparent",
+  fontFamily: "$mono",
 });
 
 const Article = styled("article", {
   display: "grid",
-  gridTemplateColumns: "1fr $space$10 65ch $space$10 1fr",
+  gridTemplateColumns: "1fr $space$10 40em $space$10 1fr",
   gridAutoRows: "min-content",
   borderRight: "2px solid $colors$mint5",
-  padding: "$16",
+  padding: "$16 0",
+  lineHeight: 1.7,
+  color: "$mint12",
 
   "> *": {
     gridColumn: 3,
@@ -74,5 +77,10 @@ const Article = styled("article", {
     gridColumn: "2 / span 3",
     marginTop: "1em",
     marginBottom: "2em",
+  },
+
+  "> figure": {
+    gridColumn: "1 / -1",
+    margin: "2em 0",
   },
 });
