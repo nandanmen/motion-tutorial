@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           To move on to the next phase, replace the div in the code with
           motion.div - and watch as the box comes alive!
         </p>
-        <Link href="/animation-breakdown" passHref>
+        <Link href="/course/animation-breakdown" passHref>
           <NextButton>Go to next section</NextButton>
         </Link>
       </Article>

@@ -1,0 +1,23 @@
+---
+title: Animation Breakdown
+---
+
+Great work! There you have it — your first animation with Framer
+Motion. Before we move on, let's break down that animation. How did we
+go from the `animate` prop to the animation you see on the right?
+
+Here's the code from before:
+
+```jsx
+import { motion } from "framer-motion";
+
+export function Box() {
+  return (
+    <motion.div
+      animate={{
+        y: 500,
+      }}
+    />
+  );
+}
+```
