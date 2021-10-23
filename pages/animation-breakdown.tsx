@@ -46,7 +46,7 @@ const AnimationBreakdown: NextPage = () => {
 
 const CodeBlock = styled("pre", {
   fontFamily: "$mono",
-  background: "$mint2",
+  background: "$mint3",
   padding: "$8 $10",
   borderRadius: "8px",
 });
@@ -81,13 +81,13 @@ const Box = styled(motion.div, {
 
 const Article = styled("article", {
   display: "grid",
-  gridTemplateColumns: "1fr 65ch 1fr",
+  gridTemplateColumns: "1fr $space$10 65ch $space$10 1fr",
   gridAutoRows: "min-content",
   borderRight: "2px solid $colors$mint5",
   padding: "$16",
 
   "> *": {
-    gridColumn: 2,
+    gridColumn: 3,
   },
 
   "> :not(:last-child)": {
@@ -95,7 +95,7 @@ const Article = styled("article", {
   },
 
   [`> ${CodeBlock}`]: {
-    gridColumn: "1 / -1",
+    gridColumn: "2 / span 3",
     marginTop: "1em",
     marginBottom: "2em",
   },

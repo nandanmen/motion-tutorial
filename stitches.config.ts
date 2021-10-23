@@ -46,7 +46,7 @@ export const { styled, keyframes, css, globalCss, getCssText } = createStitches(
         ...mintDark,
       },
       fonts: {
-        sans: "Inter, -apple-system, sans-serif",
+        sans: "Graphik, -apple-system, sans-serif",
         mono: "Space Mono, monospace",
       },
       fontSizes: {

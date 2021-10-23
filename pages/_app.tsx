@@ -10,7 +10,7 @@ const globalStyles = globalCss({
     textRendering: "optimizeLegibility",
   },
   html: {
-    background: "$mint1",
+    background: "$mint2",
     color: "$mint12",
     fontFamily: "$mono",
   },
